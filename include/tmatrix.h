@@ -290,6 +290,7 @@ public:
     {
         if (s > MAX_MATRIX_SIZE)
             throw "Error";
+
         for (size_t i = 0; i < sz; i++)
             pMem[i] = TDynamicVector<T>(sz);
     }
