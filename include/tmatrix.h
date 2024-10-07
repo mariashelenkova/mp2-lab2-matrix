@@ -117,7 +117,7 @@ public:
     {
         if ((ind < 0) || (ind >= sz))
         {
-            throw "Error"
+            throw "Error";
         }
 
         return pMem[ind];
@@ -127,7 +127,7 @@ public:
     {
         if ((ind < 0) || (ind >= sz))
         {
-            throw "Error"
+            throw "Error";
         }
 
         return pMem[ind];
