@@ -232,3 +232,21 @@ TEST(TDynamicVector, cant_multiply_vectors_with_not_equal_size)
     TDynamicVector<int> v2(5);
     ASSERT_ANY_THROW(v1 * v2);
 }
+
+TEST(TDynamicVector, constructor_move)
+{
+    TDynamicVector<int> v(8);
+    TDynamicVector<int> res(v);
+
+    TDynamicVector<int> v0(std::move(v));
+    EXPECT_EQ(v0, res);
+}
+
+TEST(TDynamicVector, operator_move)
+{
+    TDynamicVector<int> v(5);
+    TDynamicVector<int> res(v);
+
+    TDynamicVector<int> v0 = std::move(v);
+    EXPECT_EQ(v0, res);
+}
